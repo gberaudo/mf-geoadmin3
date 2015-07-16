@@ -162,10 +162,12 @@ goog.require('ga_storage_service');
         pulldownShown: !(gaBrowserSniffer.mobile || $($window).width() <= 1024),
         printShown: false,
         feedbackPopupShown: false,
+        chooseMapShown: false,
         isShareActive: false,
         isDrawActive: false,
         isFeatureTreeActive: false,
-        isSwipeActive: false
+        isSwipeActive: false,
+        isModeAdvanced: false
       };
 
       // Deactivate all tools when draw is opening
@@ -255,16 +257,6 @@ goog.require('ga_storage_service');
           hidePanel('print')
           hidePanel('tools')
         }
-
-        $('#catalog').on('shown.bs.collapse', function() {
-          // Close accordion
-          hideAccordionPanels(); 
-          
-          if (isWindowTooSmall()) { 
-            // Close selection
-            hidePanel('selection');
-          }
-        });
 
         $('#selection').on('shown.bs.collapse', function() {
           // Close accordion
