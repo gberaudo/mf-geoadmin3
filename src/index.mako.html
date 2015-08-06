@@ -233,6 +233,8 @@ itemscope itemtype="http://schema.org/WebApplication"
     </div>
 % endif
 
+    <div ga-controls3d ga-controls3d-map="map" ng-if="globals.dev3d"></div>
+
     <div ng-cloak ga-background-selector
          ga-background-selector-map="map"
          ng-hide="globals.embed || globals.offline">
