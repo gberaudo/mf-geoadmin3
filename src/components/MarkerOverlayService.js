@@ -24,6 +24,7 @@ goog.provide('ga_marker_overlay_service');
         if (!layer) {
           source = new ol.source.Vector();
           layer = new ol.layer.Vector({
+            zIndex: 1000,
             source: source
           });
           layer.set('altitudeMode', 'clampToGround');
